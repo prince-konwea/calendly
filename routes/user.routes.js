@@ -1,11 +1,12 @@
 import express from "express";
 import { Register, testHandler, deleteAllUsers } from "../controllers/user-controller.js";
-import {validateUserInput} from "../validation/userInput.js";
+import { validation } from "../middlewares/validationMiddleware.js";
+import { userSchema } from "../validation/userValidation.js";
 
 const router = express.Router()
 
 router.get("/test", testHandler);
-router.post("/register", validateUserInput, Register)
+router.post("/register",validation(userSchema), Register)
 router.delete("/delete", deleteAllUsers)
 
 export default router;

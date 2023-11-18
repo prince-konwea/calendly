@@ -1,6 +1,6 @@
-const yup = require("yup")
+import yup from "yup";
 
-const userSchema = yup.object({
+export const userSchema = yup.object({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().email().required(),
@@ -8,4 +8,3 @@ const userSchema = yup.object({
   
 })
 
-module.exports = userSchema;
