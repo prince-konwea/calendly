@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 
 export const testHandler = (req, res) => {
 
- return  res.json({message:"welcome on board"})
+ return  res.json({message:"docker dey work"})
     
 }
 
