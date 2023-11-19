@@ -3,10 +3,10 @@ import { Register, testHandler, deleteAllUsers } from "../controllers/user-contr
 import { validation } from "../middlewares/validationMiddleware.js";
 import { userSchema } from "../validation/userValidation.js";
 
-const router = express.Router()
+const userRouter = express.Router()
 
-router.get("/test", testHandler);
-router.post("/register",validation(userSchema), Register)
-router.delete("/delete", deleteAllUsers)
+userRouter.get("/test", testHandler);
+userRouter.post("/register",validation(userSchema), Register)
+userRouter.delete("/delete", deleteAllUsers)
 
-export default router;
+export default userRouter;

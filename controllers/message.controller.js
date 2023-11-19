@@ -1,4 +1,4 @@
-import messageModel from "../model/message.model";
+import messageModel from "../model/message.model.js";
 
 export const getAllMessage = async (req, res) => {
     
@@ -13,6 +13,13 @@ export const getMessageById = async (req, res) => {
     try{
 
     }catch(error){
+        return res.status(400).json({error})
+    }
+}
+export const sendMessage = async (req, res) => {
+    try {
+        
+    } catch (error) {
         return res.status(400).json({error})
     }
 }

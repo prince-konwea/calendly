@@ -1,12 +1,12 @@
 import dotenv from "dotenv/config"
 import express from "express";
-import router from "./routes/user.routes.js";
+import routes from "./routes/index.js";
 import db from "./config/database.js";
 const app = express();
 
 
 app.use(express.json())
-app.use("/api/v1", router)
+app.use("/v1", routes)
 
 
 // connecting db
